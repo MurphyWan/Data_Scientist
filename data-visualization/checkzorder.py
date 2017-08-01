@@ -1,8 +1,6 @@
 import os
 import folium
-
 print(folium.__version__)
-
 import pandas as pd
 
 
