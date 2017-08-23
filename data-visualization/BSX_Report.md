@@ -19,7 +19,8 @@
 
 
 #### _
- #### 物流行业—物流费用占比GDP的比重很高* 下图显示，我国物流费用占比GDP有逐年下降的趋势，但是与美国相比仍旧有近一倍左右的差距。于2016年达到14.8%。国际上通常用物流费用在GDP中的占比来衡量一个国家物流发展水平。
+ #### 物流行业—物流费用占比GDP的比重很高* 下图显示，我国物流费用占比GDP有逐年下降的趋势，但是与美国相比仍旧有近一倍左右的差距。
+ 于2016年达到14.8%。国际上通常用物流费用在GDP中的占比来衡量一个国家物流发展水平。
 ![notebook-1](https://github.com/MurphyWan/pydata_analysis/blob/master/data-visualization/images/BSX-02-Y2016-China_vs_USA.gif)
 
 
@@ -33,3 +34,9 @@
 
 #### 物流司机关注的风险点排名 (单位：人数)
 ![notebook-3](https://github.com/MurphyWan/pydata_analysis/blob/master/data-visualization/images/BSX-04-Y2016-China_truck_drivers_risk_ranks.gif )
+
+#### 保神先 省市聚类统计MAP
+http://www.5156bao.com/BSX_choropleth_traffic.html
+
+#### 保神先 动态分级统计MAP
+http://www.5156bao.com/BSX_dscatter_traffic.html
