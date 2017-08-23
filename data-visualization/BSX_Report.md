@@ -35,8 +35,10 @@
 #### 物流司机关注的风险点排名 (单位：人数)
 ![notebook-3](https://github.com/MurphyWan/pydata_analysis/blob/master/data-visualization/images/BSX-04-Y2016-China_truck_drivers_risk_ranks.gif )
 
-#### 保神先 省市聚类统计MAP
+#### _
+#### BSX 省市聚类统计MAP
 http://www.5156bao.com/BSX_choropleth_traffic.html
 
-#### 保神先 动态分级统计MAP
+#### _
+#### BSX 动态分级统计MAP
 http://www.5156bao.com/BSX_dscatter_traffic.html
