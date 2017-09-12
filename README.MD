@@ -1,7 +1,6 @@
->#### the repository names pydata_analysis which is for my data analysis practice with python
->#### I use python, numpy, pandas and so many other libs for data analysis and use folium lib to visualize the data 
+#### the repository names pydata_analysis which is for my data analysis practice with python
+#### I use python, numpy, pandas and so many other libs for data analysis and use leaflet/foundationmap/ libs to visualize the data 
 
-[数据分析及其可视化URL](https://github.com/MurphyWan/pydata_analysis/blob/master/data-visualization/BSX_Report.md)
 
 ---
 
@@ -56,10 +55,10 @@
 
 #### _
 >#### BSX 省市聚类统计MAP
-
+![](http://upload-images.jianshu.io/upload_images/5522220-d1b25b040a7d7660.gif?imageMogr2/auto-orient/strip)
 
 #### _
 >#### BSX 动态分级统计MAP
-
+![](http://upload-images.jianshu.io/upload_images/5522220-0a5a4feb1c73db76.gif?imageMogr2/auto-orient/strip)
 
 
