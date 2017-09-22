@@ -1,4 +1,4 @@
->### This folder contains contents including the Growth Plan of Data Scientist!
+>### This folder contains all contents including the Growth Plan of Data Scientist!
 
 #### My training certificates on Data Scientist and Python Programming are as below!
 
