@@ -1,7 +1,26 @@
+'''
+### 1
+ÄúÏÖÔÚÓ¦¸Ã¶ÔNumPyÓĞÒ»¸öºÜºÃµÄ»ù´¡£¬²¢´¦ÀíÄúµÄÊı¾İÎÊÌâ¡£NumPy±È¶şÎ¬listÈİÒ×µÃ¶à£¬ÒòÎª£º
+
+1¡¢¶ÔÊı¾İÖ´ĞĞ¼ÆËãºÜÈİÒ×¡£
+2¡¢Êı¾İË÷ÒıºÍÇĞÆ¬¸ü¿ì¸üÈİÒ×¡£
+3¡¢ÎÒÃÇ¿ÉÒÔ¿ìËÙ×ª»»Êı¾İÀàĞÍ¡£
+
+×ÜÖ®£¬NumPyÊ¹PythonÖĞµÄÊı¾İ¸ü¼Ó¸ßĞ§¡£¹ã·ºÓ¦ÓÃÓÚÕâ¸öÔ­Òò£¬ÌØ±ğÊÇ»úÆ÷Ñ§Ï°¡£
+
+Äú¿ÉÄÜÒÑ¾­×¢Òâµ½NumPyÔÚ¹ıÈ¥Á½¸öÈÎÎñÖĞÓöµ½ÁËÒ»Ğ©ÏŞÖÆ¡£ÀıÈç£º
+
+1¡¢Êı×éÖĞµÄËùÓĞÏî¶¼±ØĞë¾ßÓĞÏàÍ¬µÄÊı¾İÀàĞÍ¡£¶ÔÓÚĞí¶àÊı¾İ¼¯£¬ÕâÊ¹µÃÊı×éÔÚÊ¹ÓÃÊ±»áÂé·³¡£
+2¡¢ÁĞºÍĞĞ±ØĞëÍ¨¹ıÊı×ÖÒıÓÃ£¬µ±ÄúÔÚÁĞÃûºÍÁĞµÄÊı×ÖÀ´»ØÍù¸´Ê±£¬»áÒıÆğ»ìÏı¡£
+
+ÔÚ½ÓÏÂÀ´µÄ¼¸¸öÈÎÎñÖĞ£¬ÎÒÃÇ½«ÁË½âPandas¿â£¬ÕâÊÇ×îÁ÷ĞĞµÄÊı¾İ·ÖÎö¿âÖ®Ò»¡£Pandas½¨Á¢ÔÚNumPyÉÏ£¬µ«ÊÇ¸üºÃµØ½â¾öÁËNumPyµÄ¾ÖÏŞĞÔ¡£
+'''
+
+
 ## 3. Read in a CSV file ##
 
 '''
-### è¿™èŠ‚è®²
+### Õâ½Ú½²
 '''
 import pandas as pd
 
@@ -11,8 +30,8 @@ print(food_info, type(food_info))
 ## 4. Exploring the DataFrame ##
 
 '''
-### è¿™èŠ‚è®² Pandasä¸­æœ€åŸºç¡€çš„æ–¹æ³•å’Œå±æ€§
-ä¾‹å¦‚ï¼š
+### Õâ½Ú½² PandasÖĞ×î»ù´¡µÄ·½·¨ºÍÊôĞÔ
+ÀıÈç£º
 pd.head()
 pd.columns
 pd.shape
@@ -31,10 +50,26 @@ print(num_cols)
 
 first_twenty = food_info.head(20)
 
+'''
+### 5 Indexing
+µ±Äú½«ÎÄ¼ş¶ÁÈëDataFrameÊ±£¬pandas»áÊ¹ÓÃµÚÒ»ĞĞÖĞµÄÖµ£¨Ò²³ÆÎª±êÌâ£©×÷ÎªÁĞ±êÇ©ºÍÒÔ¼°ĞĞÊı×÷ÎªĞĞ±êÇ©¡£±êÇ©Í³³ÆÎªË÷Òıindex¡£DataFrame°üº¬ĞĞË÷ÒıºÍÁĞË÷Òı¡£
+
+
+'''
+
+
+'''
+### 6 Series
+¸ÃSeries¶ÔÏóÊÇPandasÓÃÀ´±íÊ¾ĞĞºÍÁĞµÄºËĞÄÊı¾İ½á¹¹¡£SeriesÊÇÓëNumPyÏòÁ¿ÀàËÆµÄÖµµÄ±ê¼Ç¼¯ºÏ¡£Series¶ÔÏóµÄÖ÷ÒªÓÅµãÊÇ¿ÉÒÔÊ¹ÓÃ¡¾·ÇÕûÊı±êÇ©¡¿¡£NumPyÊı×éÖ»ÄÜÊ¹ÓÃÕûÊı±êÇ©½øĞĞË÷Òı¡£
+
+µ±´ÓDataFrame·µ»ØĞĞ»òÁĞÊ±£¬PandasÀûÓÃ´Ë¹¦ÄÜÌá¹©¸ü¶àÉÏÏÂÎÄ¡£ÀıÈç£¬µ±Äú´ÓDataFrameÖĞÑ¡ÔñÒ»ĞĞÊ±£¬¶ø²»ÊÇ½ö½«¸ÃĞĞÖĞµÄÖµ×÷ÎªÁĞ±í·µ»Ø£¬pandas»á·µ»Ø°üº¬ÁĞ±êÇ©µÄSeries¶ÔÏóÒÔ¼°ÏàÓ¦µÄÖµ£º
+'''
+
+
 ## 7. Selecting a row ##
 
 '''
-### è¿™èŠ‚è®² loc[]æ–¹æ³•
+### Õâ½Ú½² loc[]·½·¨
 '''
 
 
@@ -44,7 +79,7 @@ print(hundredth_row)
 ## 8. Data types ##
 
 '''
-###è¿™èŠ‚è®² DataFrame.dtypes
+###Õâ½Ú½² DataFrame.dtypes
 '''
 
 
@@ -53,9 +88,9 @@ print(food_info.dtypes)
 ## 9. Selecting multiple rows ##
 
 '''
-### è¿™èŠ‚è®² é€‰å–å¤šè¡Œï¼Œè¿˜æ˜¯ç”¨.loc[]
- 1) æ–¹æ³•ä¸€ï¼špass in either a [slice] of row labels, or 
- 2) æ–¹æ³•äºŒï¼ša [list] of row labels and pandas will return a dataframe
+### Õâ½Ú½² Ñ¡È¡¶àĞĞ£¬»¹ÊÇÓÃ.loc[]
+ 1) ·½·¨Ò»£ºpass in either a [slice] of row labels, or 
+ 2) ·½·¨¶ş£ºa [list] of row labels and pandas will return a dataframe
  
  DataFrame.loc[start row : end row]
  
@@ -70,15 +105,15 @@ print("Rows 2, 5, and 10")
 two_five_ten = [2,5,10]
 print(food_info.loc[two_five_ten])
 
-#-------------ä»¥ä¸Šä¸ºåŸé¢˜å†…å®¹------------------
+#-------------ÒÔÉÏÎªÔ­ÌâÄÚÈİ------------------
 
-last_rows = food_info.loc[len(food_info)-5:] # æ˜¾ç¤ºæœ€å5è¡Œ
+last_rows = food_info.loc[len(food_info)-5:] # ÏÔÊ¾×îºó5ĞĞ
 
 
 ## 10. Selecting individual columns ##
 
 '''
-## è¿™èŠ‚è®² è·å–ä¸€åˆ— 
+## Õâ½Ú½² »ñÈ¡Ò»ÁĞ 
 '''
 
 # Series object.
@@ -100,8 +135,8 @@ print(food_info)
 ## 11. Selecting multiple columns by name ##
 
 '''
-## è¿™èŠ‚è®² é€‰æ‹©å¤šåˆ—ï¼Œé€šè¿‡åˆ—åé€‰
-æ–¹æ³•ï¼šDataFrame[['åˆ—å1', 'åˆ—å2']]ï¼Œæ³¨æ„ï¼šè¿™é‡Œæ˜¯è¿™æ ·çš„ç”¨æ³•[[,]]
+## Õâ½Ú½² Ñ¡Ôñ¶àÁĞ£¬Í¨¹ıÁĞÃûÑ¡
+·½·¨£ºDataFrame[['ÁĞÃû1', 'ÁĞÃû2']]£¬×¢Òâ£ºÕâÀïÊÇÕâÑùµÄÓÃ·¨[[,]]
 
 '''
 zinc_copper = food_info[["Zinc_(mg)", "Copper_(mg)"]]
@@ -117,7 +152,7 @@ selenium_thiamin = food_info[['Selenium_(mcg)','Thiamin_(mg)']]
 ## 12. Practice ##
 
 '''
-## è¿™èŠ‚è®²
+## Õâ½Ú½²
 
 '''
 
@@ -126,10 +161,10 @@ selenium_thiamin = food_info[['Selenium_(mcg)','Thiamin_(mg)']]
 #--------- the above is some old code--------------------
 
 gram_columns = food_info.columns.tolist()
-#print(gram_columns) #æ‰“å°æ˜¾ç¤ºï¼šè¿”å›ä¸€ä¸ªä¸€ç»´çš„listï¼Œå…¶ä¸­å…ƒç´ éƒ½æ˜¯string
+#print(gram_columns) #´òÓ¡ÏÔÊ¾£º·µ»ØÒ»¸öÒ»Î¬µÄlist£¬ÆäÖĞÔªËØ¶¼ÊÇstring
 
 '''
-# ç¬¬ä¸€æ¬¡å°è¯•ï¼Œå‡ºé”™ã€‚
+# µÚÒ»´Î³¢ÊÔ£¬³ö´í¡£
 
 gram_columns = food_info.columns.tolist()
 
@@ -142,7 +177,7 @@ gram_df = food_info.columns[gram_columns]
 
 print(gram_df.head(3)) 
 
-ã€åŸå› ã€‘åº”è¯¥æ˜¯gram_columns å·²ç»è¢«æ˜ç¡®å®šä¹‰ï¼Œä¸”æœ‰å€¼ã€‚ä½†æ˜¯åœ¨ä»¥è½®è¯¢å®ƒè‡ªå·±çš„forå¾ªç¯ä¸­åˆå†æ¬¡èµ‹äºˆå®ƒæ–°çš„å€¼ï¼Œæ”¹å†™äº†å®ƒï¼Œæ‰€ä»¥ï¼Œé™·å…¥æ­»å¾ªç¯äº†ã€‚
+¡¾Ô­Òò¡¿Ó¦¸ÃÊÇgram_columns ÒÑ¾­±»Ã÷È·¶¨Òå£¬ÇÒÓĞÖµ¡£µ«ÊÇÔÚÒÔÂÖÑ¯Ëü×Ô¼ºµÄforÑ­»·ÖĞÓÖÔÙ´Î¸³ÓèËüĞÂµÄÖµ£¬¸ÄĞ´ÁËËü£¬ËùÒÔ£¬ÏİÈëËÀÑ­»·ÁË¡£
 
 gram_columns = yyy
 
@@ -150,7 +185,7 @@ for xxx in gram_columns:
    if xxx
       gram_columns.append(xxx)
 
-æ”¹è¿›æ–¹æ³•æ˜¯ï¼šå®ƒåªèƒ½è¢«ç”¨ä¸€æ¬¡ï¼Œè¦å—forè½®è¯¢ï¼Œè¦å—append()æ·»åŠ åˆ°å…¶ä»–list
+¸Ä½ø·½·¨ÊÇ£ºËüÖ»ÄÜ±»ÓÃÒ»´Î£¬ÒªÂğforÂÖÑ¯£¬ÒªÂğappend()Ìí¼Óµ½ÆäËûlist
 '''
 
 columns_list = food_info.columns.tolist()
@@ -163,7 +198,7 @@ for each in columns_list:
 
 gram_df = food_info[gram_columns] 
 '''
-# è¿™å¥å†™é”™äº†ï¼food_info.columns[gram_columns] åº”è¯¥æ˜¯pd[['åˆ—å1'ï¼Œâ€˜åˆ—å2â€™]]ï¼Œè€Œgram_columnså·²ç»æ˜¯ä¸€ä¸ªlistäº†ï¼Œå³æœ‰ä¸€å±‚æ–¹æ‹¬å·[]ï¼Œæ‰€ä»¥è¿™é‡Œæ‹¬å·å°±ä¸€å±‚ï¼Œå°±okäº†ã€‚
+# Õâ¾äĞ´´íÁË£¡food_info.columns[gram_columns] Ó¦¸ÃÊÇpd[['ÁĞÃû1'£¬¡®ÁĞÃû2¡¯]]£¬¶øgram_columnsÒÑ¾­ÊÇÒ»¸ölistÁË£¬¼´ÓĞÒ»²ã·½À¨ºÅ[]£¬ËùÒÔÕâÀïÀ¨ºÅ¾ÍÒ»²ã£¬¾ÍokÁË¡£
 '''
 print(gram_df.head(3)) 
 
