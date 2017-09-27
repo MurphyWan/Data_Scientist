@@ -272,3 +272,59 @@ SyntaxError: invalid syntax
 放一放，往前走！！！
 '''
 
+
+
+## 10. Calculating Consumption for Each Country ##
+
+'''
+# 这节讲 延续上一节，做简单统计。每个国家1989年的酒饮料消费量。
+# 按照country、year的酒饮料消费情况（升），用字典来做。
+
+# Output：----------------------------------------------
+{'Afghanistan': 0.0,
+ 'Albania': 1.73,
+ ...
+ 'Zimbabwe': 4.9199999999999999}
+'''
+'''
+#-------------------------------------------------------
+is_canada_1986 = (world_alcohol[:,0]=='1986')& (world_alcohol[:,2]=='Canada')
+canada_1986 = world_alcohol[is_canada_1986,:]
+canada_alcohol = canada_1986[:,4]
+empty = canada_alcohol == ''
+canada_alcohol[empty] = '0'
+canada_alcohol = canada_alcohol.astype(float)
+total_canadian_drinking = canada_alcohol.sum()
+
+# -------------以上为上一节内容，这里做个参考-------------
+'''
+
+totals = {}
+'''
+#先把Learn的部分写出来：
+'''
+
+#获得给定年份的行
+year = '1989' #给定年份
+#is_year = world_alcohol[:,0] == year
+#year = world_alcohol[:,0][is_year]
+
+#Loop country
+#countries = world_alcohol[:,2]
+
+for each_c in countries:
+    is_country_year = (world_alcohol[:,2] == each_c) & (world_alcohol[:,0] == year)
+    country_year = world_alcohol[is_country_year,:]
+    country_alcohol = country_year[:,4]
+    empty = country_alcohol == ''
+    country_alcohol[empty]= '0'
+    country_alcohol = country_alcohol.astype(float)
+    country_consumption = country_alcohol.sum()
+    if each_c in totals:
+        totals[each_c] = totals[each_c] + country_consumption
+    else:
+        totals[each_c] = country_consumption
+
+      
+totals
+#------------------以上跑的结果没错，和答案比较了下，但就是过不了关，操！------------------
