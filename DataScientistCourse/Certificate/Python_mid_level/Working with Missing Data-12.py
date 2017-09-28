@@ -99,13 +99,24 @@ for each_class in passenger_classes:
 fares_by_class
 '''
 for c in passenger_classes:
-    pclass_rows = titanic_survival[titanic_survival['pclass'] == c]
-    print(pclass_rows)
-    pclass_fares = pclass_rows['fare']
-    pclass_fares_mean = pclass_fares.mean()
-    fares_by_class[c] = pclass_fares_mean
-
-
+    '''
+    #先把一列pclass做【比较】,赋值给新的DF，【拿到】符合条件所有的rows，这个rows其实是带有indecis的series
+    '''
+    pclass_rows = titanic_survival[titanic_survival['pclass'] == c] 
+    #print(pclass_rows)
+    '''
+    #这样就可以rows['fare']拿到符合pclass = 1的所有fare
+    '''
+    pclass_fares = pclass_rows['fare'] 
+    
+    '''
+    # 就可以统计这一类全体的值（统计函数，一定是计算某一类的全体值的，NA值像mean（）等方法会自动过滤）
+    '''
+    pclass_fares_mean = pclass_fares.mean() 
+    '''
+    # 给字典赋值，同时定义key
+    '''
+    fares_by_class[c] = pclass_fares_mean 
 
         
 
