@@ -324,7 +324,7 @@ age_labels = titanic_survival.apply(is_adult, axis=1)
 ## 15. Calculating Survival Percentage by Age Group ##
 
 '''
-## 这节讲
+## 这节讲 延续上一节遍历完rows后，便于做分组，这节用pivot_tabel分组做汇总
 '''
 
 print(titanic_survival['age_labels'])
@@ -339,3 +339,14 @@ Output:
 Name: age_labels, dtype: object
 '''
 age_group_survival = titanic_survival.pivot_table(index= 'age_labels', values= 'survived', aggfunc= numpy.mean) 
+
+'''
+注意：要记住这个pivot_tabel的拼写和 其中三个主要关键字的是什么？
+DF.pivot_table
+
+1) index  :column name
+2) values :list, series
+3) aggfunc:numpy.mean (自动剔除null值)
+
+'''
+
