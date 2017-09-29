@@ -320,3 +320,22 @@ def is_adult(row):
         return 'adult'
     
 age_labels = titanic_survival.apply(is_adult, axis=1)
+
+## 15. Calculating Survival Percentage by Age Group ##
+
+'''
+## 这节讲
+'''
+
+print(titanic_survival['age_labels'])
+'''
+Output:
+
+0         adult
+1         minor
+...
+1308      adult
+1309    unknown
+Name: age_labels, dtype: object
+'''
+age_group_survival = titanic_survival.pivot_table(index= 'age_labels', values= 'survived', aggfunc= numpy.mean) 
