@@ -18,7 +18,8 @@ print(recent_grads[:5])
 
 '''
 ## 这节讲 pandas.Series.unique()
-
+## 这题基本上就是之前的 6. Calculating Summary Statistics ##
+## 如果不是因为事先设定了数据结构为dict，完全可以用pivot_table，一行代码搞定。
 '''
 
 # Unique values in Major_category column.
@@ -52,3 +53,17 @@ for row in recent_grads['Major_category'].unique():
     
 print(rg_cat_counts) 
     
+
+## 4. Low-Wage Job Rates ##
+
+'''
+## 这节讲 
+'''
+
+
+low_wage_percent = 0.0
+
+low = recent_grads['Low_wage_jobs'].sum()
+total = recent_grads['Total'].sum()
+low_wage_percent = low / total
+low_wage_percent
