@@ -109,7 +109,7 @@ for m in majors:
     recent_grads_row = recent_grads[recent_grads['Major'] == m]
     all_ages_row = all_ages[all_ages['Major'] == m]
     
-    rg_unemp_rate = recent_grads_row.iloc[0]['Unemployment_rate']
+    rg_unemp_rate = recent_grads_row.iloc[0]['Unemployment_rate'] # 为什么就要第一行呢？说实话，还没有深想。
     aa_unemp_rate = all_ages_row.iloc[0]['Unemployment_rate']
     
     if rg_unemp_rate < aa_unemp_rate:
