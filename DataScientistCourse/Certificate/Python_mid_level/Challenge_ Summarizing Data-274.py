@@ -57,7 +57,7 @@ print(rg_cat_counts)
 ## 4. Low-Wage Job Rates ##
 
 '''
-## 这节讲 
+## 这节讲 两列各自sum的除法
 '''
 
 
@@ -67,3 +67,53 @@ low = recent_grads['Low_wage_jobs'].sum()
 total = recent_grads['Total'].sum()
 low_wage_percent = low / total
 low_wage_percent
+
+## 5. Comparing Data Sets ##
+
+'''
+## 这节讲 
+
+## The Hint is as below
+
+1\Within the for loop, store recent grads of looped major in recent_grads_row.
+2\Within the for loop, store all_ages of looped major in all_ages_row.
+3\Within the for loop, store the Unemployment_rate column in recent_grads_row at the first row index in rg_unemp_rate.
+4\Within the for loop, store the Unemployment_rate column in all_ages_row at the first row index in aa_unemp_rate.
+5\Check the unemployment rate columns against each other.
+6]Create a new variable to store a count each time recent_grads is less than all_ages.
+'''
+
+
+# All majors, common to both DataFrames
+majors = recent_grads['Major'].unique()
+rg_lower_count = 0
+
+#majors
+
+'''
+for mj in majors:
+    mj_rg_row = recent_grads[recent_grads['Major'] == mj]
+    mj_aa_row = all_ages[all_ages['Major'] == mj]
+    
+    unemrate_rg = mj_rg_row.iloc[0]['Unemployment_rate']
+    unemrate_aa = all_ages.iloc[0]['Unemployment_rate']
+    
+    if unemrate_rg < unemrate_aa:
+        rg_lower_count += 1
+
+print(rg_lower_count)
+'''
+majors = recent_grads['Major'].unique()
+rg_lower_count = 0
+for m in majors:
+    recent_grads_row = recent_grads[recent_grads['Major'] == m]
+    all_ages_row = all_ages[all_ages['Major'] == m]
+    
+    rg_unemp_rate = recent_grads_row.iloc[0]['Unemployment_rate']
+    aa_unemp_rate = all_ages_row.iloc[0]['Unemployment_rate']
+    
+    if rg_unemp_rate < aa_unemp_rate:
+        rg_lower_count += 1
+
+print(rg_lower_count)
+    
