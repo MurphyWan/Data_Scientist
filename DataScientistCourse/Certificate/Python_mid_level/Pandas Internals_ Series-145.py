@@ -170,9 +170,12 @@ rt_mean = Series((rt_critics + rt_users)/2, index = fandango['FILM'])
 rt_mean
 
 '''
-# --------------the above is my code---------------------
-# --------------the below is the answer------------------
+# --------------the above is my code----------------------------
+# 答案的比我的更加简洁。说明两个相同index的Series可以直接进行四则运算。
+# --------------the below is the answer-------------------------
 '''
 rt_mean = (rt_critics + rt_users)/2
 
 print(rt_mean)
+
+
