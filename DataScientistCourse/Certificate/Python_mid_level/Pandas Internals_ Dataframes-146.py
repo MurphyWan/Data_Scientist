@@ -62,7 +62,8 @@ print(fandango_films)
 
 '''
 # @author:murphywan
-## 这节讲 选择指定的索引行 
+## 这节讲 选择指定的索引行，多行
+## 方法，pd.loc (可以用字符串)
 '''
 
 fandango_films
