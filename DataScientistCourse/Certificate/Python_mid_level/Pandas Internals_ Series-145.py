@@ -30,3 +30,94 @@ series_rt = fandango['RottenTomatoes']
 
 print(series_film)
 print(series_rt)
+
+
+## 3. Custom Indexes ##
+
+'''
+## 这节讲 根据两列Series数据，定义一个新的SeriesA。一列作为A的data，第二列作为index，这个index是电影名字的string。
+
+Q：已知电影名series，求同索引的下的series_rt，即电影名对应的分数
+
+这里的Series都可以通过tolist()转换成list类型。
+'''
+
+# Import the Series object from pandas
+from pandas import Series
+
+film_names = series_film.values
+rt_scores = series_rt.values
+
+data = rt_scores.tolist()
+index = film_names.tolist()
+series_custom = Series(data, index)
+
+series_custom[['Minions (2015)', 'Leviathan (2014)']]
+
+print(series_custom)
+
+## 4. Integer Index Preservation ##
+
+'''
+## 这节讲
+
+
+
+Even though we specified that the Series object uses a custom string index, 
+the object still has an internal integer index that we can use for selection. 
+When it comes to indexes, Series objects act like both dictionaries and lists. 
+We can access values with our custom index (like the keys in a dictionary), 
+or the integer index (like the index in a list).
+'''
+
+
+series_custom = Series(rt_scores , index=film_names)
+series_custom[['Minions (2015)', 'Leviathan (2014)']]
+
+fiveten = series_custom[5:11]
+print(fiveten)
+
+## 5. Reindexing ##
+
+'''
+## 这节讲 Series中的reindex(), sorted()
+
+## sorted(index)  给index排序，一般安装首字母数字、或字母顺序排序；
+## reindex(index) 给这个Series按照新的index从新排序，相当于xls扩展其他行一起重新排序。
+'''
+
+original_index = series_custom.index
+
+'''
+第一次尝试，出错。被Learn的部分误导了。
+sorted_by_index = original_index.tolist()
+sorted_by_index = sorted_by_index.reindex()
+'''
+sorted_index  = sorted(original_index)
+sorted_by_index = series_custom.reindex(sorted_index)
+
+
+
+## 6. Sorting ##
+
+'''
+## 这节讲 sort_index() 和 sort_values()
+
+## 1)sort_index(), Link:
+http://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.Series.sort_index.html
+Series.sort_index(axis=0, level=None, ascending=True, inplace=False, sort_remaining=True)
+
+
+## 2)sort_values(), Link:
+http://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.Series.sort_values.html
+Series.sort_values(axis=0, ascending=True, inplace=False, kind='quicksort', na_position='last')
+'''
+import pandas as pd
+
+sc1 = series_custom
+print(sc1)
+
+sc2 = pd.Series.sort_index(sc1)
+sc3 = pd.Series.sort_values(sc1)
+print(sc2[:10])
+print(sc3[:10])
