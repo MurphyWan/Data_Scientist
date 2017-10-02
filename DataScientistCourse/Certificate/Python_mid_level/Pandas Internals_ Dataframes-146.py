@@ -2,7 +2,7 @@
 
 '''
 # @author:murphywan
-## 这节讲 
+## 这节讲 pd.read_csv(), pd.head(), pd.index
 '''
 import pandas as pd
 
@@ -10,6 +10,7 @@ fandango = pd.read_csv('fandango_score_comparison.csv')
 fandango.head(2)
 
 fandango.index
+
 
 
 ## 2. Using Integer Indexes to Select Rows ##
