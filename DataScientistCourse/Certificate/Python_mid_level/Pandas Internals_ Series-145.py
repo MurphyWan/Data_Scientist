@@ -135,8 +135,7 @@ series_normalized = series_custom / 20
 '''
 为何答案加了一个括号？
 
-series_normalized = (series_custom / 20)
-其结果都是一样的。
+series_normalized = (series_custom / 20) 这样写的结果都是一样的。
 
 Avengers: Age of Ultron (2015)                    3.70
 Cinderella (2015)                                 4.25
@@ -146,4 +145,6 @@ Gett: The Trial of Viviane Amsalem (2015)         5.00
 Kumiko, The Treasure Hunter (2015)                4.35
 dtype: float64
 '''
+
+
 print(series_normalized)
