@@ -121,3 +121,21 @@ sc2 = pd.Series.sort_index(sc1)
 sc3 = pd.Series.sort_values(sc1)
 print(sc2[:10])
 print(sc3[:10])
+
+
+## 7. Transforming Columns With Vectorized Operations ##
+
+'''
+## 这节讲 Series的对象 可以直接进行四则运算，使得归一化特别简单。
+## 方法：比如SeriesA / 20，在其values最大值是20的情况下，那么就可以完成归一化的动作。非常方便。
+'''
+
+series_normalized = series_custom / 20
+
+'''
+为何答案加了一个括号？
+
+series_normalized = (series_custom / 20)
+其结果都是一样的。
+'''
+print(series_normalized)
