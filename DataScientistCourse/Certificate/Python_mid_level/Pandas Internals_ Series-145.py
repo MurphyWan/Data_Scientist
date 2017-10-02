@@ -135,16 +135,20 @@ series_normalized = series_custom / 20
 '''
 为何答案加了一个括号？
 
-series_normalized = (series_custom / 20) 这样写的结果都是一样的。
-
-Avengers: Age of Ultron (2015)                    3.70
-Cinderella (2015)                                 4.25
-Ant-Man (2015)                                    4.00
-...
-Gett: The Trial of Viviane Amsalem (2015)         5.00
-Kumiko, The Treasure Hunter (2015)                4.35
-dtype: float64
+series_normalized = (series_custom / 20)
+其结果都是一样的。
 '''
-
-
 print(series_normalized)
+
+
+## 8. Comparing and Filtering ##
+
+'''
+## 这节讲 过滤，Series的过滤方法
+
+## 方法：obj2[obj2>0] 用这样的方式进行过滤 
+'''
+criteria_one = series_custom > 50
+criteria_two = series_custom < 75
+
+both_criteria = series_custom[criteria_one & criteria_two]
