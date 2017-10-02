@@ -49,9 +49,13 @@ http://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.s
 fandango = pd.read_csv('fandango_score_comparison.csv')
 
 fandango_films = fandango.set_index(fandango['FILM'], drop= False)
+'''
+## drop = False，保留原column，不要删除。
+'''
 print(fandango_films.index)
 print('_________________________________________________________')
 print(fandango_films)
+
 
 
 ## 4. Using a Custom Index for Selection ##
