@@ -203,7 +203,10 @@ rt_mt_user = float_df[['RT_user_norm', 'Metacritic_user_nom']]
 rt_mt_deviations = rt_mt_user.apply(lambda x: np.std(x), axis=1)
 print(rt_mt_deviations[0:5])
 
-
+'''
+## 照着上面的例子打，只是把np.std()，换成了np.mean()，你就可以过关。这里没啥技术含量。
+## 但是，关键要理解每一条语句是什么意思。所以，本章的第五节非常重要。大家可以参考下，我已经把它掰碎了。
+'''
 rm_user_norm = float_df[['RT_user_norm','Metacritic_user_nom']]
 rt_mt_means = rm_user_norm.apply(lambda x:np.mean(x), axis=1)
 
