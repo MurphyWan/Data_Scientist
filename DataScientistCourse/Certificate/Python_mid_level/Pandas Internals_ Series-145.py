@@ -152,3 +152,27 @@ criteria_one = series_custom > 50
 criteria_two = series_custom < 75
 
 both_criteria = series_custom[criteria_one & criteria_two]
+
+## 9. Alignment ##
+
+'''
+## 这节讲 data alignment 数据对齐
+## 这里将 两个Series有着相同的索引，就是‘FILM’，然后把评论家和用户对于同一部电影（同一个index）的打分进行平均。
+'''
+
+rt_critics = Series(fandango['RottenTomatoes'].values, index=fandango['FILM'])
+rt_users = Series(fandango['RottenTomatoes_User'].values, index=fandango['FILM'])
+
+#print(rt_critics)
+#print(rt_users)
+
+rt_mean = Series((rt_critics + rt_users)/2, index = fandango['FILM'])
+rt_mean
+
+'''
+# --------------the above is my code---------------------
+# --------------the below is the answer------------------
+'''
+rt_mean = (rt_critics + rt_users)/2
+
+print(rt_mean)
