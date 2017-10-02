@@ -79,7 +79,6 @@ best_movies_ever = fandango_films.loc[['The Lazarus Effect (2015)','Gett: The Tr
 
 
 ## 5. Apply() Logic Over the Columns in a Dataframe ##
-
 '''
 # @author:murphywan
 ## 这节讲 pd.apply()方法
@@ -110,15 +109,66 @@ import numpy as np
 # returns the data types as a Series
 types = fandango_films.dtypes
 print(types)
+'''
+Output
+FILM                           object
+RottenTomatoes                  int64
+RottenTomatoes_User             int64
+Metacritic                      int64
+Metacritic_User               float64
+IMDB                          float64
+Fandango_Stars                float64
+Fandango_Ratingvalue          float64
+RT_norm                       float64
+RT_user_norm                  float64
+Metacritic_norm               float64
+Metacritic_user_nom           float64
+IMDB_norm                     float64
+RT_norm_round                 float64
+RT_user_norm_round            float64
+Metacritic_norm_round         float64
+Metacritic_user_norm_round    float64
+IMDB_norm_round               float64
+Metacritic_user_vote_count      int64
+IMDB_user_vote_count            int64
+Fandango_votes                  int64
+Fandango_Difference           float64
+dtype: object
+'''
+
 print('--------------------------------------')
 # filter data types to just floats, index attributes returns just column names
 float_columns = types[types.values == 'float64'].index
 print(float_columns)
+'''
+Index(['Metacritic_User', 'IMDB', 'Fandango_Stars', 'Fandango_Ratingvalue',
+       'RT_norm', 'RT_user_norm', 'Metacritic_norm', 'Metacritic_user_nom',
+       'IMDB_norm', 'RT_norm_round', 'RT_user_norm_round',
+       'Metacritic_norm_round', 'Metacritic_user_norm_round',
+       'IMDB_norm_round', 'Fandango_Difference'],
+      dtype='object')
+'''
 print('--------------------------------------')
+
+
 # use bracket notation to filter columns to just float columns
 float_df = fandango_films[float_columns]
 print(float_df)
+
+'''
+                                                Metacritic_User  IMDB  \
+FILM                                                                    
+Avengers: Age of Ultron (2015)                              7.1   7.8   
+Cinderella (2015)                                           7.5   7.1   
+Ant-Man (2015)                                              8.1   7.8   
+...
+
+[146 rows x 15 columns]
+'''
 print('--------------------------------------')
+
+
+
 # `x` is a Series object representing a column
 deviations = float_df.apply(lambda x: np.std(x))
 
