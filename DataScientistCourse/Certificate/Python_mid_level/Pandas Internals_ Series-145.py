@@ -137,5 +137,13 @@ series_normalized = series_custom / 20
 
 series_normalized = (series_custom / 20)
 其结果都是一样的。
+
+Avengers: Age of Ultron (2015)                    3.70
+Cinderella (2015)                                 4.25
+Ant-Man (2015)                                    4.00
+...
+Gett: The Trial of Viviane Amsalem (2015)         5.00
+Kumiko, The Treasure Hunter (2015)                4.35
+dtype: float64
 '''
 print(series_normalized)
