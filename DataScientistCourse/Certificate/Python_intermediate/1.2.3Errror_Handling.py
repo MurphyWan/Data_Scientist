@@ -184,5 +184,45 @@ except Exception as exc:
     
 #---------------------------------------------------------------------------------------------------------------------------
 
+##8.The Pass Keyword
+
+'''
+@author: murphywan
+## 这节讲 继续try/except。想让程序继续执行，而不是每次报错或者导致中断。那么用pass语句。
+'''
+
+converted_years = []
+
+
+'''
+以下是第一次尝试，过关，很简单。但是，要扣细节：
+#print(birth_years)
+for y in birth_years:
+    year = y
+    try:
+        year = int(year)
+        print(year)
+    except Exception as exc:
+        #pass
+        print(type(exc))
+        print(str(exc))
+    converted_years.append(year)
+
+converted_years
+'''
+
+for y in birth_years:
+    year = y
+    try:
+        year = int(year)
+    except Exception as exc:
+        pass
+    converted_years.append(year)
+
+converted_years
     
+#---------------------------------------------------------------------------------------------------------------------------
+
+
+
 
