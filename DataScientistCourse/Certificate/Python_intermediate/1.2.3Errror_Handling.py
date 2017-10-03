@@ -137,3 +137,20 @@ for row in legislators:
     birth_years.append(parts[0])
 
 print(birth_years)    
+
+
+#---------------------------------------------------------------------------------------------------------------------------
+
+## 6. Try/except Blocks
+
+'''
+@author: murphywan
+## 这节讲 切入正题，Try/except语句
+## 出现场景：将一个column的数据类型转换成其他类型时，比如要把year的值从string转化成int
+'''
+
+    
+try:
+    float('Hi, MurphyWan')
+except Exception:
+    print('Error converting to float.')
