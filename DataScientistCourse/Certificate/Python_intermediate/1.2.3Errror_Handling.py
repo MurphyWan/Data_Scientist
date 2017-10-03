@@ -30,7 +30,7 @@ for row in legislators:
 gender = set(gender)
 gender
 
-
+#---------------------------------------------------------------------------------------------------------------------------
 
 ## 3. Exploring the Dataset
 '''
@@ -65,4 +65,43 @@ Output
 'Jackson', 'Liberal Republican', 'Readjuster', 'Unionist', 'Adams Democrat', 'Progressive Republican', 'Readjuster Democrat', 
 'Ind. Democrat', 'Law and Order', 'Union Labor', 'Populist', 'National Greenbacker', 'Crawford Republican', 'Liberty', 
 'American Labor', 'Ind. Republican', 'New Progressive'}
+'''
+#---------------------------------------------------------------------------------------------------------------------------
+
+## 4. Missing Values
+
+'''
+@author: murphywan
+## 这节讲 针对missing values进行填空
+
+## 方法：针对list of lists，用for + if
+        for row in rows:
+            if row[1] == "":
+                row[1] = "NAN"
+
+### 处理缺失值的四个策略（这里讲第2点）：
+1)删除包含缺少数据的行。
+2)用指定的值填充空字段。
+3)用计算的值填充空字段。
+4)与确实数据可以一起使用的分析技术。
+'''
+
+for row in legislators:
+    if row[3] == '':
+        row[3] = 'M'
+
+'''
+#以下仅看下gender中是否只有M，F两种结果。
+'''
+gender = []
+for row in legislators:
+    gender.append(row[3])
+    
+gender = set(gender)
+gender
+
+
+'''
+Output
+{'F', 'M'}
 '''
