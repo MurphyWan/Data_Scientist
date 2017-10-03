@@ -154,3 +154,35 @@ try:
     float('Hi, MurphyWan')
 except Exception:
     print('Error converting to float.')
+
+#---------------------------------------------------------------------------------------------------------------------------
+  
+    
+## 7. Exception Instances
+'''
+@author: murphywan
+## 这节讲 继续try/except语法，as
+1）可以将except的实例赋值给as后面的变量excA。 
+2）可以在except语句中调用这个变量excA，即自己的实例
+
+## 方法和举例：
+try:
+    int('')
+except Exception as exc:
+    print(type(exc))
+'''
+
+try:
+    int('Hi, murphywan')
+except Exception as exc:
+    #Print the type of the Exception instance.
+    print(type(exc))
+    
+    #Convert the Exception instance to a string and print it out.
+    print(str(exc))
+
+    
+#---------------------------------------------------------------------------------------------------------------------------
+
+    
+
