@@ -105,3 +105,35 @@ gender
 Output
 {'F', 'M'}
 '''
+
+#---------------------------------------------------------------------------------------------------------------------------
+
+##5. Parsing Birth Years
+'''
+@author: murphywan
+## 这节讲 处理日期型字符串，如：1980-08-30
+## 方法：date.split('-')
+## 返回：一个元素为string的list
+'''
+
+birth_years = []
+
+birthday = []
+'''
+for row in legislators:
+    birthday.append(row[2].split('-'))
+    print(birthday)
+    birth_years.append(birthday[0])
+    #print(birth_years)
+
+#birth_years
+
+以上是第一次尝试，报错。原因是没运行处结果来。
+其实真正的原因在于：我把事情搞复杂了，又增加了一个list birthday，然后birth_years变成了list of lists
+'''
+
+for row in legislators:
+    parts = row[2].split('-')
+    birth_years.append(parts[0])
+
+print(birth_years)    
