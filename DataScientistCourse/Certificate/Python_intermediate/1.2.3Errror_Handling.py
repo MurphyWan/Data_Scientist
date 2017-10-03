@@ -1,3 +1,29 @@
+
+'''python
+In this mission, we'll be working with legislators.csv, which records information on every historical member of the U.S. Congress. Here's a preview of the dataset:
+
+last_name,first_name,birthday,gender,type,state,party
+Bassett,Richard,1745-04-02,M,sen,DE,Anti-Administration
+Bland,Theodorick,1742-03-21,,rep,VA,
+Burke,Aedanus,1743-06-16,,rep,SC,
+Carroll,Daniel,1730-07-22,M,rep,MD,
+The file includes these columns:
+
+last_name -- the legislator's last name
+first_name -- the legislator's first name
+birthday -- the legislator's birthday
+gender -- the legislator's gender
+type -- the chamber in which the legislator served - either Senate (sen) or House of Representatives (rep)
+state -- the state the legislator represents
+party -- the legislator's party affiliation
+As you can see from the data extract, some rows contain missing values for some columns. For example, the gender and party columns are missing in the second row after the header row. Missing data can cause errors, so it needs to be dealt with. In this mission, we'll explore some of the errors that occur when we ignore missing values and how to handle them.
+
+As we learn, we'll work on finding the most common names for U.S. legislators. We'll lay the groundwork in this mission, and bring it all together in the next one.
+'''
+
+
+##------------------------------------------------------------------------------------------------------
+
 ## 2.Sets
 
 '''
@@ -276,6 +302,11 @@ for row in legislators:
         row[7] = last_value
     last_value = row[7]
 '''
+
+#---------------------------------------------------------------------------------------------------------------------------
+
+
+## 11. Next Steps
 
 '''
 In this mission, we did some basic exploration and manipulation with legislators.csv, 
