@@ -223,6 +223,33 @@ converted_years
     
 #---------------------------------------------------------------------------------------------------------------------------
 
+##9. Convert Birth Years to Integers
+'''
+@author: murphywan
+## 这节讲 将已知list of lists中的column date，格式如 yyyy-mm--dd，拆分后，在row的list中增加一column year。
+'''
+
+birth_year= []
+
+for row in legislators:
+    #print(row)
+    birthday = row[2]
+    
+    #这样写，是在list取第一个元素。
+    year = birthday.split('-')[0]
+    try:
+        birth_year = int(year)
+    except Exception as exc:
+        #print(type(exc))
+        #print(str(exc))
+        birth_year = 0
+    row.append(birth_year)   
+
+legislators
+   
+#---------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
