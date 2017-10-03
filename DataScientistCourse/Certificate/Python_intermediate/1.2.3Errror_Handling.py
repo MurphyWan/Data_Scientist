@@ -1,4 +1,4 @@
-## 1.Sets
+## 2.Sets
 
 '''
 ## 这节讲 【集合】的创建和相关方法
@@ -29,3 +29,25 @@ for row in legislators:
     
 gender = set(gender)
 gender
+
+
+
+## 3. Exploring the Dataset
+'''
+@author: murphywan
+## 这节讲 拿到一个新的数据集，先探索些可能的patterns。要看values的唯一值，将list转化成set
+
+### 比如：
+### 1）缺失数据，N/A
+### 2）明显有问题的数据，出生日期2050年
+### 3）重复出现的数据，性别column，都是男
+'''
+party = []
+for row in legislators:
+    party.append(row[6])
+
+party = set(party)
+
+print(party)
+print('-------------------------------')
+print(legislators)
