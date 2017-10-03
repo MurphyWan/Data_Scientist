@@ -250,7 +250,36 @@ legislators
    
 #---------------------------------------------------------------------------------------------------------------------------
 
+## 10. Fill in Years Without a Value
+'''
+## 这节讲 延续上一节，将year设置为0的值替换成上一个值
 
+除了将空值设置成0，这样的做法，是第一次真正改动“值”。好处是，与实际值接近，那么与实际情况也接近。
+其逻辑前提在于，名单中所有立法者的出生日期是按须排列的。
+'''
+last_value = 1
 
+for row in legislators:
+    if row[7] == 0:
+        row[7]= last_value
+    else:
+        last_value = row[7]
+        
+legislators
 
+'''
+## 提示：Remember to assign row[7] to the variable last_value.
+## 此处为标准答案。上面的else：可以不用写哦。意思一样。
+last_value = 1
+for row in legislators:
+    if row[7] == 0:
+        row[7] = last_value
+    last_value = row[7]
+'''
+
+'''
+In this mission, we did some basic exploration and manipulation with legislators.csv, 
+and laid the groundwork for our names project. In the next mission, we'll learn some advanced list concepts, 
+then find the most common names for U.S. legislators who served after 1940.
+'''
 
