@@ -51,3 +51,18 @@ party = set(party)
 print(party)
 print('-------------------------------')
 print(legislators)
+
+'''
+我们发现，输出的结果中第一个就是空值，''
+Output
+{'', 'Popular Democrat', 'Democrat-Liberal', 'Nonpartisan', 'American', 'Democratic Republican', 
+'Ind. Republican-Democrat', 'States Rights', 'Anti Jacksonian', 'Democrat', 'Conservative Republican', 
+'Coalitionist', 'Anti-Jacksonian', 'Ind. Whig', 'Jackson Republican', 'Adams', 'Jacksonian', 'Silver Republican', 
+'Anti Masonic', 'Socialist', 'Anti-Administration', 'Pro-Administration', 'Union', 'Conservative',
+'Anti-Lecompton Democrat', 'Nullifier', 'Progressive', 'Federalist', 'Whig', 'Republican', 'Independent Democrat', 
+'Unconditional Unionist', 'Democratic and Union Labor', 'Republican-Conservative', 'Constitutional Unionist',
+'Free Silver', 'Free Soil', 'Independent', 'Farmer-Labor', 'Union Democrat', 'Anti Jackson', 'Unknown', 'Prohibitionist',
+'Jackson', 'Liberal Republican', 'Readjuster', 'Unionist', 'Adams Democrat', 'Progressive Republican', 'Readjuster Democrat', 
+'Ind. Democrat', 'Law and Order', 'Union Labor', 'Populist', 'National Greenbacker', 'Crawford Republican', 'Liberty', 
+'American Labor', 'Ind. Republican', 'New Progressive'}
+'''
