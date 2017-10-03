@@ -227,6 +227,7 @@ converted_years
 '''
 @author: murphywan
 ## 这节讲 将已知list of lists中的column date，格式如 yyyy-mm--dd，拆分后，在row的list中增加一column year。
+然后，报错的year，即空值year 用0来填充。
 '''
 
 birth_year= []
