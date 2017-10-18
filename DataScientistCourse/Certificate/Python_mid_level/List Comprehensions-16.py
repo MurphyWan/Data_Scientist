@@ -84,3 +84,26 @@ trees = ["cedar", "maple", "fig"]
 for i , thing in enumerate(things):
     thing.append(trees[i])
     
+#-----------------------------------------------------------------
+
+
+'''
+## List Comprehensions 列表解析式 | 04. List Comprehensions
+## 作用：用一个现成的list生成新的list
+## 注意：用在列表解析式中的for循环最后是没有冒号的“：”
+
+for example:
+animal_lengths = [len(animal) for animal in animals]
+'''
+
+apple_prices = [100, 101, 102, 105]
+
+'''
+#------------第一次尝试-------------------
+apple_prices_doubled = apple_prices * 2
+apple_prices_lowered = apple_prices - 100
+#结果失败。numpy的ndarray数组应该可以这样操作。
+'''
+apple_prices_doubled = [n*2 for n in apple_prices]
+apple_prices_lowered = [m-100 for m in apple_prices]
+
