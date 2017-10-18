@@ -243,3 +243,30 @@ for key in name_counts:
     count = name_counts[key]
     if max_value is None or count > max_value:
         max_value = count
+        
+#-----------------------------------------------------------------------------------------------------------
+
+'''
+## List Comprehensions | 09. The Items Method
+## 这节讲 延续上一节，本节将用item()方法，可以同时遍历字典中的key和value；
+## 方法：for key, value in dictA.items() # 注意items末尾加's'的，别遗漏。
+
+## 如下：
+
+fruits = {
+    "apple": 2,
+    "orange": 5,
+    "melon": 10
+}
+
+for fruit, rating in fruits.items():
+    print(rating)
+
+'''
+
+plant_types = {"orchid": "flower", "cedar": "tree", "maple": "tree"}
+
+for key, value in plant_types.items():
+    print(key)
+    print(value)
+
