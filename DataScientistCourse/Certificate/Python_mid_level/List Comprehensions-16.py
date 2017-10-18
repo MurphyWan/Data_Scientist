@@ -182,3 +182,25 @@ Check whether max_value equals None using the max_value is None syntax.
 If max_value equals None, or if i > max_value, then we assign the value of i to max_value.
 At the end of the loop, max_value will equal -50, which is the largest value in values.
 '''
+
+#------------------------------------------------------------------------------------------
+
+'''
+## List Comprehensions | 07. Comparing with None
+
+'''
+
+values = [None, 10, 20, 30, None, 50]
+checks = []
+
+'''
+## 第一次尝试，理解错题意。应该是返回所有比较元素的布尔值。
+for value in values:
+    if value is not None and value > 30:
+        checks.append(value)
+'''
+
+checks = [x is not None and x >30 for x in values]
+
+
+
