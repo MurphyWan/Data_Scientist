@@ -107,3 +107,38 @@ apple_prices_lowered = apple_prices - 100
 apple_prices_doubled = [n*2 for n in apple_prices]
 apple_prices_lowered = [m-100 for m in apple_prices]
 
+
+
+#-------------------------------------------------------------------
+
+'''
+## List Comprehensions 列表解析式 | 05. Counting Female Names
+
+'''
+
+name_counts = {}
+'''
+# 第一次尝试，结果错误。原因在于，取了list而不是一个具体的元素进行比较。
+for each in legislators:
+    if legislators['gender'] == 'F' and legislators['year'] > 1940:
+        name = each[1]
+        if name in name_counts:
+            name_counts[name]  += 1
+        else:
+            name_counts[name] = 1
+name_counts
+
+'''
+#legislators
+
+for row in legislators:
+    gender = row[3]    #记住，一定是取当前行的元素，而不是循环legislators中的一列。
+    year = row[7]      #同上。
+    name = row[1]
+    if gender == "F" and year > 1940:
+        
+        if name in name_counts:
+            name_counts[name] = name_counts[name] + 1
+        else:
+            name_counts[name] = 1
+
