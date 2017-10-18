@@ -207,3 +207,39 @@ output:
 [False, False, False, False, False, True]
 '''
 
+#-----------------------------------------------------------------------------------------
+
+'''
+## List Comprehensions | 08. Highest Female Name Count
+
+'''
+
+'''
+name_counts is a dictionary where the keys are female first names from legislators, and the values are the number of times the names occured after 1940.
+
+In order to extract the most common names from this dictionary, we need to determine the highest totals in name_counts. Once we know the totals, we can find the keys for them.
+
+We can iterate through all of the keys in a dictionary like this:
+'''
+'''python
+fruits = {
+        "apple": 2,
+        "orange": 5,
+        "melon": 10
+    }
+
+for fruit in fruits:
+    rating = fruits[fruit]
+'''
+'''
+In the loop above, we iterate through each key in fruits. We can access the corresponding value using fruits[fruit].
+
+Let's identify the highest totals in the next exercise.
+'''
+
+max_value = None
+
+for key in name_counts:
+    count = name_counts[key]
+    if max_value is None or count > max_value:
+        max_value = count
