@@ -248,7 +248,7 @@ for key in name_counts:
 
 '''
 ## List Comprehensions | 09. The Items Method
-## 这节讲 延续上一节，本节将用item()方法，可以同时遍历字典中的key和value；
+## 这节讲 延续上一节，本节将用items()方法，可以同时遍历字典中的key和value；
 ## 方法：for key, value in dictA.items() # 注意items末尾加's'的，别遗漏。
 
 ## 如下：
@@ -270,3 +270,18 @@ for key, value in plant_types.items():
     print(key)
     print(value)
 
+    
+    
+#--------------------------------------------------------------------------------------------
+'''
+## List Comprehensions | 10. Finding the Most Common Female Names
+## 这节讲 延续上一节，本节将用items()方法，可以同时遍历字典中的key和value；然后找出出现最多次的女性名字，即key
+'''
+
+top_female_names = []
+
+for key, x in name_counts.items():
+    if x == 2 :
+        top_female_names.append(key)
+
+    
