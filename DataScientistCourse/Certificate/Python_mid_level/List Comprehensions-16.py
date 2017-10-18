@@ -142,3 +142,43 @@ for row in legislators:
         else:
             name_counts[name] = 1
 
+#---------------------------------------------------------------------------------------
+
+#-- 6. None---
+
+'''python
+Let's say we're trying to find the maximum value in a list. We might write some code that looks like this:
+
+values = [50, 80, 100]
+max_value = 0
+for i in values:
+    if i > max_value:
+        max_value = i
+We set max_value to a low value so that everything's greater than it. But what if we changed the values list slightly?
+
+values = [-50, -80, -100]
+max_value = 0
+for i in values:
+    if i > max_value:
+        max_value = i
+In the above scenario, max_value is 0 when the loop finishes. This is wrong, because 0 isn't in values; it's just a placeholder we used to initialize max_value.
+
+We can resolve this kind of issue using the None object, which has a special data type called NoneType.
+
+The None object indicates that the variable has no value. Rather than using the normal double equals sign (==) to check whether a value equals None, we use the variable is None syntax.
+
+The is comparison operator checks for object equality. Using is instead of == prevents some custom classes from resolving to True when compared with None. We'll explore how to use operators with the None object in greater depth during a later mission. For now, let's see what the variable is None syntax looks like:
+
+values = [-50, -80, -100]
+max_value = None
+for i in values:
+    if max_value is None or i > max_value:
+        max_value = i
+In the example above, we:
+
+Initialize max_value to None.
+Loop through each item in values.
+Check whether max_value equals None using the max_value is None syntax.
+If max_value equals None, or if i > max_value, then we assign the value of i to max_value.
+At the end of the loop, max_value will equal -50, which is the largest value in values.
+'''
