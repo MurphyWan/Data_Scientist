@@ -284,4 +284,41 @@ for key, x in name_counts.items():
     if x == 2 :
         top_female_names.append(key)
 
+#---------------------------------------------------------------------------------------------------
+'''
+## List Comprehensions | 11. Finding the Most Common Male Names
+## 这节讲，复习整个这一大节，从1-10节，是求最流行的女性名字，而这节要求男的。
+'''
+
+top_male_names = []
+male_name_counts = {}
+
+# 第一步：将男性以first_name为key，次数为value，先生成字典
+for row in legislators:
+    gender = row[3]
+    year = row[7]
+    name = row[1]
+    if gender == 'M' and year >1940:
+        if name in male_name_counts:
+            male_name_counts[name] += 1
+        else:
+            male_name_counts[name] = 1
+
+# 第二步：统计出现最多的次数的字典value
+# male_name_counts
+mn_c = male_name_counts
+highest_male_count = 0  # 这里最好设置成None，而不是0。
+
+for key, value in mn_c.items():
     
+    if value is not None and value > highest_male_count:  # 完成本作业后，参阅了答案：if highest_male_count is None or count > highest_male_count: 所以，还是按照答案的比较好，原因在于highest_male_count初始设置为None，所以，这个二维判断在or的前半句highest_male_count is None 的情况下已经是True了，因此不用判断后半句，效率会更高的。
+        highest_male_count = value
+#counts #打印counts可得 数字为35
+
+# 第三步：打印出来次数最多的名字
+for key, value in mn_c.items():
+    if value == 35:                 # 这里答案比我写的好，我是print之后知道了最多次数是35，所以写死了。答案的写法是：if count == highest_male_count:
+        top_male_names.append(key)
+        
+top_male_names
+
