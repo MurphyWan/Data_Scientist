@@ -202,5 +202,8 @@ for value in values:
 
 checks = [x is not None and x >30 for x in values]
 
-
+'''
+output:
+[False, False, False, False, False, True]
+'''
 
