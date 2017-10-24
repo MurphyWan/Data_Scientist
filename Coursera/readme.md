@@ -1,6 +1,8 @@
 #### this folder  contains some python files which are the answers of python pandas practise from the website of Coursera.org
 
 '''python
+
+
 from datetime import date
 
 date.today()
@@ -36,4 +38,6 @@ Tuesday, October, 10/24/17, 2017 21:52
 
 print(dt.strftime('%a, %b, %d, %Y %H:%M'))
 Tue, Oct, 24, 2017 21:52
+
+
 '''
