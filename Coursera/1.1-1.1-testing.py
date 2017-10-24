@@ -313,3 +313,19 @@ print(35%10)
 3
 65
 5
+
+##--------------------------------------
+# 1.1-1.1-testing-9
+
+import math
+from math import sqrt
+
+bar =  math.sqrt
+print(bar(9))
+
+# output is as below---------
+
+3.0
+    
+
+
